@@ -17,7 +17,19 @@
       <button id="add-button">Add</button>
       <ul id="task-list"></ul>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+    
+  // Get current date and time
+  const date = new Date();
+  const currentDate = date.toLocaleDateString();
+  const currentTime = date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+  // Set date and time in footer
+  document.getElementById("date").innerHTML = currentDate;
+  document.getElementById("time").innerHTML = currentTime;
+
+
+    </script>
     
     <footer>
       <p class="footer-text">Created by [Your Name] on <span id="date"></span> at <span id="time"></span></p>
